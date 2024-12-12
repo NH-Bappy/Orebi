@@ -5,8 +5,9 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import Home from './componants/pages/Home';
-import Shop from './componants/pages/Shop';
+import Home from './componants/Home'
+import Shop from './pages/Shop';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(

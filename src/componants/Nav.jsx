@@ -1,9 +1,9 @@
 import React from 'react'
-import Container from '../../layer/Container'
-import Flex from '../../layer/Flex'
-import Image from '../../layer/Image'
+import Container from '../layer/Container'
+import Flex from '../layer/Flex'
+import Image from '../layer/Image'
 import Logo from '/image/Logo.png'
-import Menu from '../../layer/Menu'
+import Menu from '../layer/Menu'
 const Nav = () => {
 return (
     <div>
