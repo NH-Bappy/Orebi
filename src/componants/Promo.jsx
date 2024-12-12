@@ -4,7 +4,7 @@ import Flex from '../layer/Flex'
 import Image from '../layer/Image'
 import promoImgOne from '/image/Ad_1.png'
 import promoImgTwo from '/image/Ad_2.png'
-import promoImgThree from '../../public/image/Ad_3.png'
+import promoImgThree from '/image/Ad_3.png'
 
 const Promo = () => {
 return (
