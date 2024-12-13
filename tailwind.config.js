@@ -21,6 +21,8 @@ export default {
         mColor: '#767676',
         mHC: '#262626',
         categoryColor: '#F5F5F3',
+        ProductC : '#ffffff8a',
+        FooterColor: '#F5F5F3'
       },
       // text color
       // Background Image\

@@ -11,10 +11,10 @@ const Product = (props) => {
     return (
         <>
 
-        <div className="relative w-full group pr-6">
+        <div className="relative w-[310px] justify-between group">
         <img src={props.src} alt={props.alt}/>
         <Badge text={'text'} className={'absolute top-5 left-5'}/>
-        <div className='w-full p-5 bg-white absolute bottom-14 invisible group-hover:visible'>
+        <div className='w-full p-5 bg-ProductC absolute right-0 bottom-14 invisible group-hover:visible '>
         <Flex className={'justify-end items-center gap-4 py-1'}>
             <Text texts={'Add to Wish List'} as={'p'} className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}/>
             <FaHeart />

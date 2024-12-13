@@ -15,6 +15,7 @@ return (
               <Image imgsrc={Logo} imgalt={Logo}/>
             </div>
             <div className="w-full">
+            <ul>
               <Flex className={'gap-6 justify-center'}>
               <Menu menuName={'Home'}/>
               <Menu menuName={'Shop'}/>
@@ -22,6 +23,7 @@ return (
               <Menu menuName={'Contacts'}/>
               <Menu menuName={'Journal'}/>
               </Flex>
+              </ul>
             </div>
           </Flex>
         </Container>

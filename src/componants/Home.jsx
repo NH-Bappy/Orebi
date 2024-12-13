@@ -8,6 +8,7 @@ import AdsBanner from './AdsBanner'
 import SpecialOffer from './SpecialOffer'
 import SecondProducts from './SecondProducts'
 import Promo from './Promo'
+import Footer from './Footer'
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
     <SecondProducts/>
     <AdsBanner/>
     <SpecialOffer/>
+    <Footer/>
     </>
   )
 }
