@@ -1,16 +1,11 @@
-import React from 'react'
-import Container from '../layer/Container'
-import Product from '../layer/Product'
-import productImg from "../../public/image/Image.png"
-import productImgOne from "../../public/image/Image (1).png"
-import productImgTwo from "../../public/image/Image (2).png"
-import productImgThree from "../../public/image/Image (3).png"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import PreArow from '../icons/PreArow'
-import NextArrow from '../icons/NextArrow'
-
-
+import React, { useEffect, useState } from 'react';
+import Container from '../layer/Container';
+import Product from '../layer/Product';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import PreArow from '../icons/PreArow';
+import NextArrow from '../icons/NextArrow';
+import axios from 'axios';
 
 const Products = () => {
   const settings = {
@@ -18,30 +13,46 @@ const Products = () => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow:<PreArow/>,
-    nextArrow: <NextArrow/>
+    prevArrow: <PreArow />,
+    nextArrow: <NextArrow />,
   };
+
+  // State for products
+  const [products, setProducts] = useState([]);
+  const limit = 10; // Specify product limit
+
+  // Fetch data from API
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await axios.get('https://fakestoreapi.com/products');
+        const limitedProducts = response.data.slice(0, limit); // Take first 'limit' products
+        setProducts(limitedProducts);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    }
+    fetchProducts();
+  }, [limit]);
+
   return (
-    <>
-
-      
     <Container>
-      <h2 className='font-bold text-mHC text-5xl font-dmSans py-6'>New Arrivals</h2>
+      <h2 className="font-bold text-mHC text-5xl font-dmSans py-6">New Arrivals</h2>
 
-        
-        <Slider {...settings}>
-        <Product src={productImg} alt={productImg} PH="Basic Crew Neck Tee" dollar={"$130.098"} />
-        <Product src={productImgOne}  alt={productImgOne} PH="Basic Crew Neck Tee" dollar={"$10.098"}/>
-        <Product src={productImgTwo}  alt={productImgTwo} PH="Basic Crew Neck Tee" dollar={"$100.098"}/>
-        <Product src={productImgThree}  alt={productImgThree} PH="Basic Crew Neck Tee" dollar={"$110.098"}/>
-        </Slider>
-        
+      {/* Slider wrapping the dynamically loaded Product components */}
+      <Slider {...settings}>
+        {products.map((item) => (
+          <Product
+            key={item.id}
+            src={item.image} // Dynamic image from API
+            alt={item.title} // Alternative text
+            Title={item.title} // Product title
+            dollar={`$${item.price}`} // Product price
+          />
+        ))}
+      </Slider>
     </Container>
-    
-    {/* ================ */}
+  );
+};
 
-    </>
-  )
-}
-
-export default Products
+export default Products;

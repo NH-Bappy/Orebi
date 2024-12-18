@@ -9,6 +9,7 @@ import SpecialOffer from './SpecialOffer'
 import SecondProducts from './SecondProducts'
 import Promo from './Promo'
 import Footer from './Footer'
+import Api from './Api'
 
 
 

@@ -22,7 +22,8 @@ export default {
         mHC: '#262626',
         categoryColor: '#F5F5F3',
         ProductC : '#ffffff8a',
-        FooterColor: '#F5F5F3'
+        FooterColor: '#F5F5F3',
+        DDC : '#262626'
       },
       // text color
       // Background Image\
@@ -37,6 +38,8 @@ export default {
         productImgOne:"url('/public/image/Image (1).png')",
         productImgTwo:"url('/public/image/Image (2).png')",
         productImgThree:"url('/public/image/Image (3).png')",
+        productImgfour:"url('/public/image/coca.jpg')",
+
         // ================
         PIF:"url('/public/image/Image(04).png')",
         PIFive:"url('/public/image/Image (05).png')",

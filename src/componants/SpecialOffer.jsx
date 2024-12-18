@@ -25,12 +25,10 @@ const SpecialOffer = () => {
     <Container className={'py-16'}>
     <h2 className='font-bold text-mHC text-5xl font-dmSans py-6'>New Arrivals</h2>
     <Slider {...settings}>
-    {/* <Flex className={'justify-between pb-[50px]'}> */}
-    <Product src={SOF} alt={SOF} PH="Basic Crew Neck Tee" dollar={"$57.98"}/>
-    <Product src={SOFive} alt={SOFive} PH="Basic Crew Neck Tee" dollar={"$200"}/>
-    <Product src={SOS} alt={SOS} PH="Basic Crew Neck Tee" dollar={"$99"}/>
-    <Product src={SOSeven} alt={SOSeven} PH="Basic Crew Neck Tee" dollar={"$500.09"}/>
-    {/* </Flex> */}
+    <Product src={SOF} alt={SOF} Title="Basic Crew Neck Tee" dollar={"$57.98"} />
+    <Product src={SOFive} alt={SOFive} Title="Basic Crew Neck Tee" dollar={"$200"}/>
+    <Product src={SOS} alt={SOS} Title="Basic Crew Neck Tee" dollar={"$99"}/>
+    <Product src={SOSeven} alt={SOSeven} Title="Basic Crew Neck Tee" dollar={"$500.09"}/>
     </Slider>
     </Container>
     
