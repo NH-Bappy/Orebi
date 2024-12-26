@@ -2,7 +2,6 @@ import React from 'react'
 import Container from '../layer/Container'
 import Flex from '../layer/Flex'
 import Bars from '../icons/Bars'
-import Text from '../layer/Text'
 import { FaSearch,FaShoppingCart } from "react-icons/fa";
 import Login from '../icons/Login'
 

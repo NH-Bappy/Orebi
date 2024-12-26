@@ -52,6 +52,9 @@ export default {
         SOS:"url(../../public/image/Image (6).png",
         SOSeven:"url(../../public/image/Image (7).png",
         // specialOffer
+// about picture
+        Apo:"url(../../public/image/bu.png)",
+        but:'url(../../public/image/but.png)'
         
       }
       // Background Image
