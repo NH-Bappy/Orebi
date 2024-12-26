@@ -4,6 +4,7 @@ import Flex from '../layer/Flex'
 import Image from '../layer/Image'
 import Logo from '/image/Logo.png'
 import Menu from '../layer/Menu'
+import { Link } from 'react-router-dom'
 const Nav = () => {
 return (
     <div>
@@ -12,16 +13,33 @@ return (
         <Container>
           <Flex className={'items-center'}>
             <div className="">
+              <Link to={"/"}>
               <Image imgsrc={Logo} imgalt={Logo}/>
+              </Link>
             </div>
             <div className="w-full">
             <ul>
               <Flex className={'gap-6 justify-center'}>
+              
+              <Link to={"/"}>
               <Menu menuName={'Home'}/>
+              </Link>
+
+              <Link to={"/Shop"}>
               <Menu menuName={'Shop'}/>
+              </Link>
+
+              <Link to={"/About"}>
               <Menu menuName={'About'}/>
+              </Link>
+              
+              <Link to={"/Contacts"}>
               <Menu menuName={'Contacts'}/>
-              <Menu menuName={'Journal'}/>
+              </Link>
+              
+              <Link to={"/Account"}>
+              <Menu menuName={'Account'}/>
+              </Link>
               </Flex>
               </ul>
             </div>

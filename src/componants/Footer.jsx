@@ -8,6 +8,7 @@ import Logo from '/image/Logo.png'
 import { BsFacebook } from "react-icons/bs"
 import { BsLinkedin } from "react-icons/bs"
 import { IoLogoInstagram } from "react-icons/io5"
+import { Link } from 'react-router-dom' 
 
 
 
@@ -55,7 +56,9 @@ const Footer = () => {
     </ul>
     </div>
     <div className="w-[30%]">
+        <Link to={"/"}>
         <Image imgsrc={Logo} imgalt={Logo}/>
+        </Link>
     </div>
     </Flex>
     <Flex className={'py-10 justify-between'}>

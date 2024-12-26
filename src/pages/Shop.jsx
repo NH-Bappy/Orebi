@@ -11,8 +11,6 @@ import Pagination from '../componants/Pagination'
 const Shop = () => {
   return (
     <>
-    <Nav/>
-    <Category/>
     <Container>
     <Flex>
     <div className="w-60 py-20">
