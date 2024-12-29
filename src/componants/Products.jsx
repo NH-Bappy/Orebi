@@ -43,6 +43,7 @@ const Products = () => {
       <Slider {...settings}>
         {products.map((item) => (
           <Product
+          item={item}
             key={item.id}
             src={item.image} // Dynamic image from API
             alt={item.title} // Alternative text

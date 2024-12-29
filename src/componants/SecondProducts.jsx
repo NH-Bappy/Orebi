@@ -26,7 +26,7 @@ const SecondProducts = () => {
     async function fetchProducts() {
       try {
         const response = await axios.get('https://fakestoreapi.com/products');
-        const limitedProducts = response.data.slice(0, limit); // Take first 'limit' products
+        const limitedProducts = response.data.slice(5, limit); // Take first 'limit' products
         setProducts(limitedProducts);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -40,6 +40,7 @@ const SecondProducts = () => {
     <Slider {...settings}>
     {products.map((item) => (
     <Product
+    item={item}
     key={item.id}
     src={item.image}
     alt={item.title}

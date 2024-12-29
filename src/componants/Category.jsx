@@ -4,6 +4,7 @@ import Flex from '../layer/Flex'
 import Bars from '../icons/Bars'
 import { FaSearch,FaShoppingCart } from "react-icons/fa";
 import Login from '../icons/Login'
+import { Link } from 'react-router-dom';
 
 const Category = () => {
 return (
@@ -21,7 +22,9 @@ return (
         <div className='w-[10%]'>
             <Flex className={'gap-3'}>
             <Login/>
-            <FaShoppingCart/>
+            <Link to={"/cart"}>
+            <div className="cart"><FaShoppingCart/></div>
+            </Link>
             </Flex>
         </div>
     </Flex>

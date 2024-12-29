@@ -16,8 +16,8 @@ return (
         <Image imgsrc={promoImgOne} imgalt={promoImgOne} className={'w-full'}/>
         </div>
         <div className="w-[49%]">
-        <Image imgsrc={promoImgTwo} imgalt={promoImgTwo} className={'w-full mb-8'}/>
-        <Image imgsrc={promoImgThree} imgalt={promoImgThree} className={'w-full'}/>
+        <Image imgsrc={promoImgTwo} imgalt={promoImgTwo} className={'w-full pb-4'}/>
+        <Image imgsrc={promoImgThree} imgalt={promoImgThree} className={'w-full pt-4'}/>
         </div>
         </Flex>
         </Container>

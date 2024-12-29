@@ -5,9 +5,17 @@ import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import Flex from './Flex';
 import Text from './Text';
 import Compare from '../icons/Compare';
+import { useDispatch } from 'react-redux';
+import { addCart } from '../redux/slices/cartSlices';
 
 const Product = (props) => {
-  const { src, alt, className, Title, dollar, color, } = props;
+  const {item, src, alt, className, Title, dollar, color, } = props;
+
+const dispatch = useDispatch()
+const handleAddtoCart = () =>{
+  dispatch(addCart({ ...item, qtn: 1}));
+}
+
 
   return (
     <div className="w-full pr-4">
@@ -20,30 +28,32 @@ const Product = (props) => {
         <Badge text={'new'} className={'absolute top-5 left-5'}/>
       {/* Hover Content */}
       <div className="w-full p-5 bg-ProductC absolute right-0 bottom-0 invisible group-hover:visible ho ">
+
         <Flex className="justify-end items-center gap-4 py-1">
           <Text
             texts={'Add to Wish List'}
-            as={'p'}
-            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}
-          />
+            as={'button'}
+            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}/>
           <FaHeart />
         </Flex>
+
         <Flex className="justify-end items-center gap-4 py-2">
           <Text
             texts={'Compare'}
-            as={'p'}
-            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}
-          />
-          <Compare />
+            as={'button'}
+            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}/>
+            <Compare/>
         </Flex>
+
         <Flex className="justify-end items-center gap-4">
           <Text
+          onClick={handleAddtoCart}
             texts={'Add to Cart'}
-            as={'p'}
-            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}
-          />
+            as={'button'}
+            className={'text-sm font-dmSans text-mColor hover:text-black hover:font-bold'}/>
           <FaShoppingCart />
         </Flex>
+
       </div>
       </div>
 

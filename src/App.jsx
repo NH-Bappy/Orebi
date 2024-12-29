@@ -12,6 +12,7 @@ import Contacts from "./pages/Contacts";
 import Account from "./pages/Account";
 import RootLayout from "./componants/RootLayout";
 import Error from "./pages/Error";
+import Cart from "./pages/Cart";
 
 function App() {
   const router = createBrowserRouter(
@@ -42,6 +43,11 @@ function App() {
       <Route
         path="Account"
         element={<Account/>}>
+      </Route>
+
+      <Route
+        path="cart"
+        element={<Cart/>}>
       </Route>
 
       <Route
