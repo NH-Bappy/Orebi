@@ -13,6 +13,9 @@ import Account from "./pages/Account";
 import RootLayout from "./componants/RootLayout";
 import Error from "./pages/Error";
 import Cart from "./pages/Cart";
+import MyAccount from "./pages/MyAccount";
+import Sign_up from "./pages/Sign_up";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const router = createBrowserRouter(
@@ -48,6 +51,21 @@ function App() {
       <Route
         path="cart"
         element={<Cart/>}>
+      </Route>
+
+      <Route
+        path="MyAccount"
+        element={<MyAccount/>}>
+      </Route>
+
+      <Route
+        path="Sign_up"
+        element={<Sign_up/>}>
+      </Route>
+
+      <Route
+        path="Checkout"
+        element={<Checkout/>}>
       </Route>
 
       <Route

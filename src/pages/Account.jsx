@@ -47,7 +47,7 @@ const Account = () => {
         <Text texts={"Welcome and thank you for visiting my website! I'm thrilled to have you here. Whether you're exploring for the first time or just curious, I hope you find everything you're looking for. If you need any assistance or have questions, feel free to reach out. Enjoy your visit!"} as={"p"} className={"py-5 font-dmSans text-mColor "}/>
 
         <div className="flex justify-center ">
-          <Link><button className='font-semibold text-xl font-dmSans hover:text-blue-500 '>And Please Sign up </button></Link>
+          <Link to={'/Sign_up'}><button className='font-semibold text-xl font-dmSans hover:text-blue-500 '>And Please Sign up </button></Link>
         </div>
       </div>
 
