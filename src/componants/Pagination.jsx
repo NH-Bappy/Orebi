@@ -10,6 +10,7 @@ function Items({ currentItems }) {
         currentItems.map((item) => (
           <div key={item.id} className="w-[310px]">
             <Product
+            item={item}
               src={item.image} // Assuming images is an array, using the first image
               alt={item.title}
               Title={item.title}
