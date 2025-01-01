@@ -5,13 +5,23 @@ import { Link } from 'react-router-dom'
 import Image from '../layer/Image'
 import logo from "../../public/image/Logo.png"
 import Text from '../layer/Text'
+import { GoChevronRight } from "react-icons/go";
+import { useSelector } from 'react-redux'
 
 
 
 const Account = () => {
+  const data=useSelector(state=>(state.Breadcrumbe.previousValue))
 
   return (
     <>
+        <Container>
+        <div className="flex pt-4 items-center">
+        <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
+        <GoChevronRight className='font-dmSans text-mColor font-medium'/>
+        <p className='font-dmSans text-mColor font-medium'>Account</p>
+                        </div>
+      </Container>
     <div className="py-10 flex justify-center">
       <Container>
       <div className="w-80">

@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Menu from '../layer/Menu'
 import Flex from '../layer/Flex'
 import Text from '../layer/Text'
+import { Link } from 'react-router-dom'
 
 
 const Bars = () => {
@@ -23,6 +24,7 @@ return (
 
     <>
 
+<Link>
 <div onClick={handleDrop} className='relative z-0 group:'>
 <Flex className={'items-center gap-x-2'}>
 <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +47,7 @@ return (
         </ul>
         </div>
     </div>
+</Link>
 
 
 </>

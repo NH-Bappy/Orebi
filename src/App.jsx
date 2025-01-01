@@ -16,6 +16,7 @@ import Cart from "./pages/Cart";
 import MyAccount from "./pages/MyAccount";
 import Sign_up from "./pages/Sign_up";
 import Checkout from "./pages/Checkout";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -66,6 +67,11 @@ function App() {
       <Route
         path="Checkout"
         element={<Checkout/>}>
+      </Route>
+
+      <Route
+        path="productPage"
+        element={<ProductPage/>}>
       </Route>
 
       <Route

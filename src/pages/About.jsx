@@ -5,13 +5,21 @@ import Image from '../layer/Image'
 import Apo from '../../public/image/bu.png'
 import but from '../../public/image/but.png'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { GoChevronRight } from "react-icons/go";
 
 const About = () => {
+  const data=useSelector(state=>(state.Breadcrumbe.previousValue))
   return (
     <>
     <div className="py-20">
      <Container>
-     <Text texts={"About"} as={"h2"} className={'text-4xl text-DDC font-dmSans font-bold pb-10'}/>
+     <Text texts={"About"} as={"h2"} className={'text-4xl text-DDC font-dmSans font-bold'}/>
+           <div className="flex pb-10 pt-4 items-center">
+             <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
+             <GoChevronRight className='font-dmSans text-mColor font-medium'/>
+             <p className='font-dmSans text-mColor font-medium'>About</p>
+           </div>
      <div className="flex">
      <div className="w-6/12 pr-2"><Link to={"/shop"}><Image imgsrc={Apo} imgalt={'Apo'}/></Link></div>
      

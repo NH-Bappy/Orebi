@@ -42,7 +42,7 @@ const Products = () => {
       {/* Slider wrapping the dynamically loaded Product components */}
       <Slider {...settings}>
         {products.map((item) => (
-          <Product
+            <Product
           item={item}
             key={item.id}
             src={item.image} // Dynamic image from API

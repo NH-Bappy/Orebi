@@ -7,6 +7,7 @@ import Text from './Text';
 import Compare from '../icons/Compare';
 import { useDispatch } from 'react-redux';
 import { addCart } from '../redux/slices/cartSlices';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
   const {item, src, alt, className, Title, dollar, color, } = props;
@@ -21,8 +22,9 @@ const handleAddtoCart = () =>{
     <div className="w-full pr-4">
       {/* Product Image */}
       <div className="relative group">
+        <Link to={"productPage"}>
         <img src={src} alt={alt} className='w-[310px] h-[310px]'/>
-      
+        </Link>
 
       {/* Badge */}
         <Badge text={'new'} className={'absolute top-5 left-5'}/>

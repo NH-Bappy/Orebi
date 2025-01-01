@@ -1,20 +1,26 @@
 import React from 'react'
-import Nav from '../componants/Nav'
-import Category from '../componants/Category'
 import Flex from '../layer/Flex'
 import Container from '../layer/Container'
 import Text from '../layer/Text'
 import Menu from '../layer/Menu'
 import Pagination from '../componants/Pagination'
+import { GoChevronRight } from "react-icons/go";
+import { useSelector } from 'react-redux'
 
 
 const Shop = () => {
+  const data=useSelector(state=>(state.Breadcrumbe.previousValue))
   return (
     <>
     <Container>
     <Flex>
     <div className="w-60 py-20">
-      <Text texts={'Products'} as={'h2'} className={'font-dmSans font-bold text-4xl text-mHC pb-24'}/>
+      <Text texts={'Products'} as={'h2'} className={'font-dmSans font-bold text-4xl text-mHC'}/>
+      <div className="flex pb-24 pt-4 items-center">
+        <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
+        <GoChevronRight className='font-dmSans text-mColor font-medium'/>
+        <p className='font-dmSans text-mColor font-medium'>shop</p>
+      </div>
 {/* shop Category strar */}
       <Text texts={'Shop by Category'} as={'h4'} className={'font-dmSans font-bold text-1xl text-mHC pb-2'}/>
       <ul className='w-36'>

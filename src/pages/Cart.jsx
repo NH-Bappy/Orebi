@@ -86,8 +86,7 @@ const Cart = () => {
     className={"text-xl font-bold text-DDC font-dmSans"}/>
 </div>
 
-<div 
-className="w-3/12 px-4">
+<div className="w-3/12 px-4">
 <div className="flex w-36 h-8 border-2 items-center">
 <button className='w-12 text-xl font-bold text-DDC font-dmSans' onClick={()=>productRemove(item)}>-</button>
 <Text 
