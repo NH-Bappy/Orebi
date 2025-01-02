@@ -7,6 +7,7 @@ import SOF from '../../public/image/Image (4).png'
 import Text from '../layer/Text'
 import { FaStar } from "react-icons/fa";
 import { FaSortDown } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 const ProductPage = () => {
   return (
@@ -106,7 +107,9 @@ const ProductPage = () => {
           </div>
           <div className="flex gap-5">
           <button className='py-2 px-10 border-2 text-DDC hover:bg-mHC hover:text-white font-dmSans font-semibold'>Add to Wish List</button>
+          <Link to={'/cart'}>
           <button className='py-2 px-14 border-2 text-DDC hover:bg-mHC hover:text-white font-dmSans font-semibold'>Add to Cart</button>
+          </Link>
           </div>
         </div>
         </Flex>

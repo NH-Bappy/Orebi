@@ -3,6 +3,7 @@ import Container from '../layer/Container'
 import Text from '../layer/Text'
 import { useSelector } from 'react-redux'
 import { GoChevronRight } from "react-icons/go";
+import { Link } from 'react-router-dom';
 const Contacts = () => {
   const data=useSelector(state=>(state.Breadcrumbe.previousValue))
   return (
@@ -10,11 +11,13 @@ const Contacts = () => {
     <div className="py-10">
       <Container>
       <Text texts={"Contacts"} as={"h3"} className={"text-4xl font-bold pt-5 font-dmSans text-DDC"}/>
+      <Link to={data=="Home"?"/":`/${data}`}>
       <div className="flex pb-20 pt-4 items-center">
                    <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
                    <GoChevronRight className='font-dmSans text-mColor font-medium'/>
                    <p className='font-dmSans text-mColor font-medium'>Contacts</p>
-                 </div>
+      </div>
+      </Link>
       <Text texts={"Fill up a Form"} as={"h4"} className={"text-2xl font-semibold text-DDC font-dmSans pb-10"}/>
     <div className="w-96 border-b-2">
     <Text texts={"Name"} as={"h5"} className={"text-xl font-semibold py-1 font-dmSans text-DDC"}/>

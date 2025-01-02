@@ -15,13 +15,15 @@ const Account = () => {
 
   return (
     <>
-        <Container>
+<Container>
+    <Link to={data=="Home"?"/":`/${data}`}>
         <div className="flex pt-4 items-center">
         <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
         <GoChevronRight className='font-dmSans text-mColor font-medium'/>
         <p className='font-dmSans text-mColor font-medium'>Account</p>
-                        </div>
-      </Container>
+        </div>
+    </Link>
+</Container>
     <div className="py-10 flex justify-center">
       <Container>
       <div className="w-80">

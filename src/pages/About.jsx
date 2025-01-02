@@ -15,11 +15,13 @@ const About = () => {
     <div className="py-20">
      <Container>
      <Text texts={"About"} as={"h2"} className={'text-4xl text-DDC font-dmSans font-bold'}/>
+     <Link to={data=="Home"?"/":`/${data}`}>
            <div className="flex pb-10 pt-4 items-center">
              <p className='font-dmSans text-mColor font-medium'>{`${data}`}</p>
              <GoChevronRight className='font-dmSans text-mColor font-medium'/>
              <p className='font-dmSans text-mColor font-medium'>About</p>
            </div>
+           </Link>
      <div className="flex">
      <div className="w-6/12 pr-2"><Link to={"/shop"}><Image imgsrc={Apo} imgalt={'Apo'}/></Link></div>
      
