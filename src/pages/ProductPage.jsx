@@ -42,7 +42,7 @@ const ProductPage = () => {
           </div>
           <div className="flex gap-4 pb-6">
           <Text texts={"SIZE :"} as={'p'} className={'text-base font-dmSans text-DDC font-semibold'}/>
-          <div className="flex w-28 h-6 border-2 items-center justify-between px-2 ">
+          <div className="flex w-28 h-6 border-2 items-center justify-between px-2">
             <Text 
             texts={"S"} 
             as={"h5"} 
