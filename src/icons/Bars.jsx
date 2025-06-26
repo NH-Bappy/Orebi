@@ -25,7 +25,7 @@ return (
     <>
 
 <Link>
-<div onClick={handleDrop} className='relative z-0 group:'>
+<div onClick={handleDrop} className='relative z-10 group:'>
 <Flex className={'items-center gap-x-2'}>
 <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.653061 2.93878H17.6327C17.9933 2.93878 18.2857 2.64641 18.2857 2.28571V0.653061C18.2857 0.292367 17.9933 0 17.6327 0H0.653061C0.292367 0 0 0.292367 0 0.653061V2.28571C0 2.64641 0.292367 2.93878 0.653061 2.93878Z" fill="#262626"/>

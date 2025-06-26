@@ -19,7 +19,7 @@ const Login = () => {
   return (
 
 <>
-<div onClick={handleDrop} className='relative group:'>
+<div onClick={handleDrop} className='relative group: z-10'>
     <Flex className={'gap-1'}>
     <FaUser/>
     <FaCaretDown />
